@@ -1,0 +1,41 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="edu.wcc.myonelinerserver">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        package="edu.wcc.myonelinerserver"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <!-- <scheme>://<host>:<port>[<path>|<pathPrefix>|<pathPattern>] -->
+                <!-- https://developer.android.com/guide/topics/manifest/data-element.html -->
+                <data android:host="" android:path="/edu.wcc.oneliner" android:scheme="content"
+                    tools:ignore="AppLinkUrlError"></data>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="edu.wcc.random_oneliner.ACTION"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="edu.wcc.oneliner.ACTION"></action>
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
+        </activity>
+
+
+    </application>
+</manifest>
